@@ -25,4 +25,19 @@ class User_model extends CI_model
         $data = $this->db->get('user');
         return $data->result_array();
     }
+    public function login($username, $password)
+    {
+        $this->db->where('username', $username);
+        $query = $this->db->get('user');
+
+        if ($query->num_rows() > 0) {
+            $user = $query->row();
+
+            if (password_verify($password, $user->password)) {
+                return $user;
+            }
+        }
+
+        return null;
+    }
 }

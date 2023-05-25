@@ -130,6 +130,46 @@ class ApiCC extends RestController {
         );
     }
     
+    function login_post()
+    {
+        $username = $this->post('username');
+        $password = $this->post('password');
+
+        // Cek apakah username dan password telah diisi
+        if ($username && $password) {
+            // Panggil model User_model untuk melakukan validasi login
+            $user = $this->User_model->login($username, $password);
+
+            // Cek apakah login berhasil
+            if ($user) {
+                $this->response(
+                    array(
+                        'status' => true,
+                        'pesan' => 'Login berhasil',
+                        'user' => $user
+                    ),
+                    200
+                );
+            } else {
+                $this->response(
+                    array(
+                        'status' => false,
+                        'pesan' => 'Username atau password salah'
+                    ),
+                    401
+                );
+            }
+        } else {
+            $this->response(
+                array(
+                    'status' => false,
+                    'pesan' => 'Silakan isi username dan password'
+                ),
+                400
+            );
+        }
+    }
+    
 }
 
     // function index_post()
