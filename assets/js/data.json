@@ -1,0 +1,30 @@
+{
+    "user":[
+        {
+            "username": "anton",
+            "password": "123",
+            "nama_depan": "Antonio",
+            "nama_belakang": "Alexa",
+            "nomor_seluler": "0895339917231",
+            "gmail": "anton123@gmail.com",
+            "alamat": "Sukabirus Rt.11 No.23, Bojongsoang, Jawa Barat"
+        }
+    ],
+    "admin":[
+        {
+            "username": "admin",
+            "password": "admin"
+        }
+    ],
+    "paket":[
+        {
+            "jenis_paket": "Super-express"
+        },
+        {            
+            "jenis_paket": "Express"
+        },{
+
+            "jenis_paket": "Reguler"
+        }
+    ]
+}

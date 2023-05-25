@@ -1,0 +1,139 @@
+body {
+    background-color: #F5EDDC;
+    font-family: 'Poppins';
+}
+
+.container-fluid {    
+    margin-top: 5%;
+    margin-bottom: 5%;
+    min-height: 650px;
+  }
+
+.navbar{
+    background-color: #FF6464 !important;
+}
+
+h1 {    
+    padding-bottom: 20px;
+    font-size: 50px;
+    color: #FF6464;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: white;    
+}
+
+a:hover {
+    color: black;
+}
+
+.nav-item .navbar-brand {    
+    padding-top: 10px;
+    font-size: 18px;    
+}
+
+.navbar-left {
+    padding-right: 40px;
+}
+
+.profile-username {    
+    padding-right: 10px;
+}
+
+.dropdown-menu {
+    margin-left: -10px;
+    margin-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: #FF6464;
+}
+
+.btn {
+    padding: 20px;
+    font-size: 20px;
+    color: #fcf9f2;
+    border: 2px solid #FF6464 ;
+    background-color: #FF6464 !important;
+}
+
+.text-center{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+table thead {
+    background-color: #FF6464;
+    border: 2px solid black;
+}
+
+table tbody {
+    border: 2px solid black;
+}
+
+table tr{
+    border: 1px solid black;
+}
+
+table tr th{
+    border: 1px solid black;
+}
+
+table tr td{
+    border: 1px solid black;
+}
+
+footer{
+    width: 100%;
+    background-color: #f5f5f5;
+    color: white;
+  }
+  footer a{
+    color: #bfffff;
+  }
+  footer a:hover{
+    color: white;
+  }
+  
+  .footer-bottom{
+    background: #FF6464;
+    padding: 2em;
+  }
+  .footer-top{
+    background: #2d4958;  
+  }
+  .footer-middle{
+     background: #FF6464;
+    padding-top: 2em;
+    color: white;
+  }
+  /**Sub Navigation**/
+  .subnavigation-container{
+    background: #FF6464;
+  }
+  .subnavigation .nav-link{
+    color: white;
+    font-weight: bold;
+  }
+  .subnavigation-container{
+    text-align: center;
+  }
+  .subnavigation-container .navbar{
+    display: inline-block;
+    margin-bottom: -6px; /* Inline-block margin offffset HACK -Gilron */
+  }
+  .col-subnav a{
+    padding: 1rem 1rem;
+    color: white;
+    font-weight: bold;
+  }
+  .col-subnav .active{
+    border-top:5px solid orange;
+   background: white;
+    color: black;
+  }

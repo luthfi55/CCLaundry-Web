@@ -1,0 +1,152 @@
+body {
+    background-color: #F5EDDC;
+    font-family: 'Poppins';
+}
+
+.container-md {    
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.navbar{
+    background-color: #FF6464 !important;
+}
+
+h1 {    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 100px;
+    color: #FF6464;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+    padding-bottom: 20px;
+    font-size: 50px;
+    color: #FF6464;
+}
+
+h3 {
+    color: #FF6464;
+}
+
+h5 {
+    font-size: 25px;
+}
+
+a {
+    color: white;    
+}
+
+a:hover {
+    color: black;
+}
+
+.nav-item .navbar-brand {    
+    padding-top: 10px;
+    font-size: 18px;    
+}
+
+.navbar-left {
+    padding-right: 40px;
+}
+
+.profile-username {    
+    padding-right: 10px;
+}
+
+.dropdown-menu {
+    margin-left: -10px;
+    margin-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: #FF6464;
+}
+
+.btn {
+    font-size: 15px;
+    color: #fcf9f2;
+    border: 2px solid #FF6464 ;
+    background-color: #FF6464 !important;
+}
+
+.text-center{
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+@media (max-width: 1499.98px) {
+    
+}
+
+@media (max-width: 1024px) {
+
+}
+  
+@media (max-width: 768px) {
+}
+
+/* .carousel-item img {
+    filter: blur(8px);
+} */
+
+.content .container {
+    padding-top: 100px ;
+    padding-bottom: 100px;
+}
+
+footer{
+    color: white;
+  }
+  footer a{
+    color: #bfffff;
+  }
+  footer a:hover{
+    color: white;
+  }
+  
+  .footer-bottom{
+    background: #FF6464;
+    padding: 2em;
+  }
+  .footer-top{
+    background: #2d4958;  
+  }
+  .footer-middle{
+     background: #FF6464;
+    padding-top: 2em;
+    color: white;
+  }
+  /**Sub Navigation**/
+  .subnavigation-container{
+    background: #FF6464;
+  }
+  .subnavigation .nav-link{
+    color: white;
+    font-weight: bold;
+  }
+  .subnavigation-container{
+    text-align: center;
+  }
+  .subnavigation-container .navbar{
+    display: inline-block;
+    margin-bottom: -6px; /* Inline-block margin offffset HACK -Gilron */
+  }
+  .col-subnav a{
+    padding: 1rem 1rem;
+    color: white;
+    font-weight: bold;
+  }
+  .col-subnav .active{
+    border-top:5px solid orange;
+   background: white;
+    color: black;
+  }
+

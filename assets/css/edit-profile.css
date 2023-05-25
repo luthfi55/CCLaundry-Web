@@ -1,0 +1,151 @@
+body {
+    background-color: #F5EDDC;
+    font-family: 'Poppins';
+}
+
+.container-md {    
+    margin-top: 5%;
+    margin-bottom: 5%;
+    min-height: 650px;
+}
+
+.navbar{
+    background-color: #FF6464 !important;
+}
+
+h1 {    
+    padding-bottom: 20px;
+    font-size: 50px;
+    color: #FF6464;
+    font-family: 'Poppins', sans-serif;
+}
+
+a {
+    color: white;    
+}
+
+a:hover {
+    color: black;
+}
+
+.nav-item .navbar-brand {    
+    padding-top: 10px;
+    font-size: 18px;    
+}
+
+.navbar-left {
+    padding-right: 40px;
+}
+
+.profile-username {    
+    padding-right: 10px;
+}
+
+.dropdown-menu {
+    margin-left: -10px;
+    margin-top: 12px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.dropdown-item:hover {
+    color: white;
+    background-color: #FF6464;
+}
+
+h1 {
+    padding-top: 30px;
+    color: #F5EDDC;
+}
+
+.content {
+    border-radius: 20px;
+    background-color: #FF6464;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 20px;
+}
+
+hr {
+    border: 1px solid #fcf9f2;
+}
+
+form {
+    background-color: #fcf9f2;
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px 20px 20px 20px;    
+}
+
+.map {
+    padding-bottom: 20px;
+}
+
+.col-md-12 {
+    background-color: #fcf9f2;    
+    padding-bottom: 30px;
+    border: 3px solid #fcf9f2;
+    border-radius: 0px 0px 20px 20px;
+}
+
+.button-area {
+    padding-bottom: 20px;
+}
+
+.btn {
+    background-color: #FF6464;
+    color: #fcf9f2;
+}
+
+.btn:hover {
+    background-color: #fcf9f2;
+    border: 1px solid black;
+}
+footer{
+    color: white;
+  }
+  footer a{
+    color: #bfffff;
+  }
+  footer a:hover{
+    color: white;
+  }
+  
+  .footer-bottom{
+    background: #FF6464;
+    padding: 2em;
+  }
+  .footer-top{
+    background: #2d4958;  
+  }
+  .footer-middle{
+     background: #FF6464;
+    padding-top: 2em;
+    color: white;
+  }
+  /**Sub Navigation**/
+  .subnavigation-container{
+    background: #FF6464;
+  }
+  .subnavigation .nav-link{
+    color: white;
+    font-weight: bold;
+  }
+  .subnavigation-container{
+    text-align: center;
+  }
+  .subnavigation-container .navbar{
+    display: inline-block;
+    margin-bottom: -6px; /* Inline-block margin offffset HACK -Gilron */
+  }
+  .col-subnav a{
+    padding: 1rem 1rem;
+    color: white;
+    font-weight: bold;
+  }
+  .col-subnav .active{
+    border-top:5px solid orange;
+   background: white;
+    color: black;
+  }

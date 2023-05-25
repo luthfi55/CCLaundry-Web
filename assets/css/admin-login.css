@@ -1,0 +1,191 @@
+body {
+    background-color: #F5EDDC;
+    font-family: 'Poppins';
+}
+
+.container-md {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    ;
+    border-radius: 20px;
+
+}
+
+.col-2 {
+    background-color: #F5EDDC;
+}
+
+.logo {
+    padding-left: 10px;
+    position: absolute;
+    top: 35%;
+    transform: translate(0, 0);
+}
+
+h1 {
+    font-size: 60px;
+    font-family: 'Fredoka One', cursive;
+    color: #FF6464;
+}
+
+
+@media (min-width: 1500px) {
+    .logo {
+        font-size: 60px;
+    }
+}
+
+@media (max-width: 1499.98px) {
+    img {
+        padding-top: 80px;
+        width: 300px;
+    }
+
+    .logo {
+        font-size: 33px;
+    }
+
+    .login {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 1024px) {
+    img {
+        padding-top: 100px;
+        width: 250px;
+    }
+
+    .logo {
+        font-size: 26px;
+    }
+
+    .login {
+        font-size: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    img {
+        padding-top: 150px;
+        width: 200px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    #col {
+        border: 1px;
+    }
+}
+
+.login {
+    padding-top: 40px;
+    padding-bottom: 50px;
+}
+
+img {
+    margin-left: -20px;
+
+}
+
+label {
+    color: #F5EDDC;
+    padding-bottom: 5px;
+}
+
+.col-3 {
+    border: 15px solid #FF6464;
+    margin-left: -15px;
+    background-color: #FF6464;
+    border-radius: 20px 0px 0px 20px;
+}
+
+.col-5 {
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #fcf9f2;
+    border: 2px solid #FF6464;
+    border-radius: 0px 20px 20px 0px;
+}
+
+.col-8 {
+    padding-top: 30px;
+    padding-left: 30px;
+    padding-right: 50px;
+    padding-bottom: 150px;
+}
+
+#input-area {
+    padding-bottom: 50px;
+}
+
+#exampleInputName {
+    border-radius: 6px;
+}
+
+#exampleInputPassword1 {
+    border-radius: 6px;
+}
+
+.btn-light {
+    border-radius: 6px;
+    letter-spacing: 2px;
+    color: #fcf9f2;
+    border: 2px solid #FF6464;
+    background-color: #FF6464 !important;
+}
+
+.btn-light:focus {
+    background-color: #FF6464 !important;
+    color: #F5EDDC !important;
+}
+
+.btn-light:active {
+    background-color: #fcf9f2 !important;
+    color: #FF6464 !important;
+}
+
+.btn-light:visited {
+    background-color: #FF6464 !important;
+    color: #F5EDDC !important;
+}
+
+.btn-light:hover {
+    letter-spacing: 2px;
+    color: black;
+    border: 2px solid black;
+    background-color: #fcf9f2 !important;
+}
+
+.form-control {
+    padding: 10px;
+    border: 2px solid black;
+    background-color: #fcf9f2;
+    border-radius: 6px;
+    color: black;
+}
+
+.form-control::placeholder {
+    color: black;
+}
+
+form .row {
+    padding-top: 30px;
+}
+
+a {
+    color: #FF6464;
+}
+
+a:hover {
+    color: black;
+}
+
+hr {
+    border: 1px solid black;
+}
