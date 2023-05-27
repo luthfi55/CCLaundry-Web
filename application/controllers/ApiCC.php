@@ -70,6 +70,40 @@ class ApiCC extends RestController {
         }
     }
 
+    function get_user_by_id_get()
+    {
+        $username = $this->get('username');
+        if ($username){
+            $list_user = $this->User_model->getUserData($username);
+            if ($list_user){
+                $this->response(
+                    array(
+                        'status' => true,                        
+                        'list_user' => $list_user,
+                    ),
+                    200
+                );
+            }
+            else {
+                $this->response(
+                    array(
+                    'status' => false,
+                    'pesan' => 'User tidak ditemukan'
+                    ),
+                    404
+                );
+            }
+        } else {
+            $this->response(
+                array(
+                    'status' => false,
+                    'pesan' => 'Silahkan isi username user'
+                    ),
+                    404
+                );
+        }
+    }
+
     function index_post(){
         $data['user'] = $this->db->get_where('user', ['username' => $this->session->userdata('username')])->row_array();        
         $id_user = $this->post('id_user', true);

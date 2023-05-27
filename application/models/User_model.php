@@ -25,6 +25,14 @@ class User_model extends CI_model
         $data = $this->db->get('user');
         return $data->result_array();
     }
+
+    public function getUserData($username){
+        $this->db->where('username',$username);
+
+        $data = $this->db->get('user');
+        return $data->result_array();
+    }
+    
     public function login($username, $password)
     {
         $this->db->where('username', $username);
