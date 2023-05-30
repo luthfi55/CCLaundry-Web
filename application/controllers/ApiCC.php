@@ -188,7 +188,7 @@ class ApiCC extends RestController {
         $alamat = $this->post('alamat');
         $email = $this->post('email');
         $no_telp = $this->post('no_telp');
-        $password = $this->post('password');
+        $password = password_hash($this->post('password'),PASSWORD_DEFAULT);
 
         // cek apakah username sudah ada
         if ($this->User_model->is_username_exist($username)) {
@@ -219,12 +219,47 @@ class ApiCC extends RestController {
         $this->response(
             array(
                 'status' => true,                        
-                'pesan' => 'Data berhasil terkirim',
+                'pesan' => 'Akun berhasil dibuat',
             ),
             200
         );        
     }
 
+    function update_put()
+    {   
+        $id = $this->put('id');
+        $nama = $this->put('nama');
+        $username = $this->put('username');
+        $jenis_kelamin = $this->put('jenis_kelamin');
+        $alamat = $this->put('alamat');
+        $email = $this->put('email');
+        $no_telp = $this->put('no_telp');
+        $password = password_hash($this->put('password'),PASSWORD_DEFAULT);
+
+        $datauser = array(      
+            'id' => $id,
+            'nama' => $nama,
+            'username' => $username,
+            'jenis_kelamin' => $jenis_kelamin,
+            'alamat' => $alamat,
+            'email' => $email,
+            'no_telp' => $no_telp,
+            'password' => $password,
+            'is_active' => 1,
+            'date_created' => time()
+        );
+
+        $this->User_model->ubah_data($id, $datauser);
+
+        $this->response(
+            array(
+                'isi data' => $datauser,
+                'status' => true,                        
+                'pesan' => 'Akun berhasil diperbarui',
+            ),
+            200
+        );        
+    }
     
 }
 
