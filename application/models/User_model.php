@@ -61,4 +61,9 @@ class User_model extends CI_model
         return $query->num_rows() > 0;
     }    
 
+    public function update_profile($id, $datauser){
+        $this->db->where('id',$id);        
+		$this->db->update('user', $datauser);	
+    }
+
 }
