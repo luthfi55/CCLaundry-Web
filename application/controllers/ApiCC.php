@@ -12,30 +12,6 @@ class ApiCC extends RestController {
         $this->load->model('User_model');
     }
 
-    function index_get()
-    {
-        $list_user = $this->User_model->getAllUser();
-        if ($list_user) {
-            $jumlah_user = count ($list_user);
-            $this->response(
-                array(
-                    'status' => true,
-                    'jumlah' => $jumlah_user,
-                    'list_user' => $list_user,
-                ),
-                200
-            );
-        } else {
-            $this->response(
-                array(
-                'status' => false,
-                'pesan' => 'Data user tidak ditemukan'
-                ),
-                404
-            );
-        }
-    }
-
     function get_by_id_get()
     {
         $id = $this->get('id');
@@ -203,6 +179,52 @@ class ApiCC extends RestController {
             );
         }
     }
+
+    function register_post()
+    {
+        $nama = $this->post('nama');
+        $username = $this->post('username');
+        $jenis_kelamin = $this->post('jenis_kelamin');
+        $alamat = $this->post('alamat');
+        $email = $this->post('email');
+        $no_telp = $this->post('no_telp');
+        $password = $this->post('password');
+
+        // cek apakah username sudah ada
+        if ($this->User_model->is_username_exist($username)) {
+            $this->response(
+                array(
+                    'status' => false,                        
+                    'pesan' => 'Username sudah digunakan. Silahkan gunakan username lain.',
+                ),
+                409
+            );
+            return;
+        }
+
+        $datauser = array(
+            'nama' => $nama,
+            'username' => $username,
+            'jenis_kelamin' => $jenis_kelamin,
+            'alamat' => $alamat,
+            'email' => $email,
+            'no_telp' => $no_telp,
+            'password' => $password,
+            'is_active' => 1,
+            'date_created' => time()
+        );
+
+        $this->User_model->register($datauser);
+
+        $this->response(
+            array(
+                'status' => true,                        
+                'pesan' => 'Data berhasil terkirim',
+            ),
+            200
+        );        
+    }
+
     
 }
 
