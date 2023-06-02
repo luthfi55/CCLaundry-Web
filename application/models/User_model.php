@@ -9,7 +9,7 @@ class User_model extends CI_model
 
     public function getTrackData($id){
         $this->db->where('id_user',$id);
-        
+        $this->db->where('status !=', 'Pesanan anda telah selesai'); 
         $data = $this->db->get('pesanan');
         return $data->result_array();
     }

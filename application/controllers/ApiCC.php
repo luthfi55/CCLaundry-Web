@@ -46,6 +46,40 @@ class ApiCC extends RestController {
         }
     }
 
+    function get_history_by_id_get()
+    {
+        $id = $this->get('id');
+        if ($id){
+            $list_product = $this->User_model->getHistoryData($id);
+            if ($list_product){
+                $this->response(
+                    array(
+                        'status' => true,                        
+                        'list_product' => $list_product,
+                    ),
+                    200
+                );
+            }
+            else {
+                $this->response(
+                    array(
+                    'status' => false,
+                    'pesan' => 'Data product tidak ditemukan'
+                    ),
+                    404
+                );
+            }
+        } else {
+            $this->response(
+                array(
+                    'status' => false,
+                    'pesan' => 'Silahkan isi parameter ID Product'
+                    ),
+                    404
+                );
+        }
+    }
+
     function get_user_by_id_get()
     {
         $username = $this->get('username');
@@ -260,6 +294,8 @@ class ApiCC extends RestController {
             200
         );        
     }
+
+
     
 }
 
